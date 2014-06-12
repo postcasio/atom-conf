@@ -1,0 +1,65 @@
+'exception-reporting':
+  'userId': '2db5bf6e-c14b-a9a9-2b7c-9062cea9f4b0'
+'release-notes':
+  'viewedVersion': '0.95.0'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
+'editor':
+  'fontFamily': 'Consolas'
+  'softTabs': false
+  'tabLength': 4
+  'showInvisibles': true
+'core':
+  'themes': [
+    'atom-dark-ui'
+    'solarized-dark-custom-syntax'
+  ]
+  'disabledPackages': [
+    'metrics'
+    'language-css'
+    'regex-railroad-diagram'
+    'language-javascript-semantic'
+    'autocomplete-plus'
+    'autoflow'
+    'autosave'
+    'background-tips'
+    'csv-view'
+    'deprecation-cop'
+    'dev-live-reload'
+    'exception-reporting'
+    'feedback'
+    'git-blame'
+    'language-c'
+    'language-go'
+    'language-java'
+    'language-make'
+    'language-objective-c'
+    'language-perl'
+    'language-property-list'
+    'language-ruby'
+    'language-ruby-on-rails'
+    'language-sass'
+    'language-toml'
+    'language-yaml'
+    'welcome'
+    'timecop'
+    'linter-jscs'
+  ]
+  'excludeVcsIgnoredPaths': false
+'whitespace':
+  'ignoreWhitespaceOnCurrentLine': false
+'zentabs':
+  'maximumOpenedTabs': 10
+'tree-view':
+  'hideVcsIgnoredFiles': true
+'scope-inspector':
+  'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
+'linter-php':
+  'phpExecutablePath': '/usr/local/bin'
+'spell-check':
+  'grammars': [
+    'source.php'
+  ]
+'linter-csslint': {}

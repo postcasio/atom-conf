@@ -1,0 +1,50 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+@warning-color: rgb(218, 165, 32);
+@error-color: rgb(178, 34, 34);
+
+.tree-view {
+
+}
+
+.editor {
+	line-height: 1.5;
+}
+
+.editor .cursor {
+
+}
+
+.editor .gutter {
+	margin-right: 0.2em;
+}
+
+.editor .gutter .foldable .icon-right {
+	visibility: visible;
+}
+
+.linter-highlight {
+  .region {
+    position: absolute;
+    opacity: 0.50;
+    padding: 0 1px;
+    margin-left: -1px;
+    box-sizing: content-box;
+  }
+  &.warning .region{
+    background: fadeout(@warning-color, 70%);
+    border: 1px solid @warning-color;
+  }
+  &.error .region{
+    background: fadeout(@error-color, 70%);
+    border: 1px solid @error-color;
+  }
+}
