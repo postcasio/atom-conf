@@ -229,7 +229,7 @@
 }
 
 .editor {
-	line-height: 1.5;
+
 }
 
 .editor .cursor {
@@ -237,11 +237,15 @@
 }
 
 .editor .gutter {
-	margin-right: 0.2em;
+	margin-right: 2px;
 }
 
 .editor .gutter .foldable .icon-right {
 	visibility: visible;
+}
+
+.editor .cursor-line {
+	background: rgba(255, 255, 255, 0.1);
 }
 
 .linter-highlight {
@@ -272,8 +276,8 @@
 .tree-view .file .name[data-name$='.blade.php']:before,
 .tree-view .file .name[data-name$='.view.php']:before {
 	content: @eye;
-	margin-left: -1px;
-	margin-right: 6px;
+	margin-left: -2px;
+	margin-right: 7px;
 }
 
 .tree-view .file .name[data-name$='.sh']:before,
