@@ -38,7 +38,6 @@
     'language-objective-c'
     'language-perl'
     'language-property-list'
-    'language-ruby'
     'language-ruby-on-rails'
     'language-sass'
     'language-toml'
@@ -52,10 +51,10 @@
   'ignoreWhitespaceOnCurrentLine': false
 'zentabs':
   'maximumOpenedTabs': 10
-'tree-view':
-  'hideVcsIgnoredFiles': true
+'tree-view': {}
 'scope-inspector':
   'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
+  'showSidebar': false
 'linter-php':
   'phpExecutablePath': '/usr/local/bin'
 'spell-check':
@@ -63,3 +62,6 @@
     'source.php'
   ]
 'linter-csslint': {}
+'minimap':
+  'autoToggle': true
+  'minimapScrollIndicator': false
