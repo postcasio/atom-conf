@@ -17,5 +17,6 @@
 #   'ctrl-p': 'core:move-down'
 #
 
-'.editor':
+'.platform-darwin .editor':
 	'ctrl-space': 'tern:completion'
+	'cmd-alt-down': 'editor:duplicate-lines'
