@@ -45,6 +45,7 @@
     'welcome'
     'timecop'
     'linter-jscs'
+    'atom-color-highlight'
   ]
   'excludeVcsIgnoredPaths': false
 'whitespace':
