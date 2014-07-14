@@ -46,6 +46,8 @@
     'timecop'
     'linter-jscs'
     'atom-color-highlight'
+    'language-laravel-blade'
+    'minimap-color-highlight'
   ]
   'excludeVcsIgnoredPaths': false
 'whitespace':
@@ -56,11 +58,17 @@
 'scope-inspector':
   'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
   'showSidebar': false
+  'highlightGlobalScope': true
 'linter-php':
   'phpExecutablePath': '/usr/local/bin'
 'spell-check':
   'grammars': [
     'source.php'
+    'text.git-commit'
+    'text.plain'
+    'text.plain.null-grammar'
+    'text.html.basic'
+    'source.css'
   ]
 'linter-csslint': {}
 'minimap':
