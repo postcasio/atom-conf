@@ -11,6 +11,7 @@
   'softTabs': false
   'tabLength': 4
   'showInvisibles': true
+  'lineHeight': 1.4
 'core':
   'themes': [
     'atom-dark-ui'

@@ -20,3 +20,4 @@
 '.platform-darwin .editor':
 	'ctrl-space': 'tern:completion'
 	'cmd-alt-down': 'editor:duplicate-lines'
+	'ctrl-j': 'jumpy:toggle'

@@ -10,6 +10,19 @@
 
 @import 'styles-tree-view';
 @import 'styles-syntax';
+@import 'ui-variables';
+
+@warning-color: rgb(218, 165, 32);
+@error-color: rgb(178, 34, 34);
+
+@-webkit-keyframes jumpy-fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 
 html, body, .workspace {
 	font-family: "Helvetica Neue";
@@ -26,6 +39,7 @@ html, body, .workspace {
 }
 
 .editor {
+	-webkit-font-smoothing: subpixel-antialiased;
 	.gutter {
 		margin-right: 2px;
 
@@ -34,13 +48,14 @@ html, body, .workspace {
 		}
 	}
 	.cursor-line {
-		background: rgba(255, 255, 255, 0.1);
+		background-color: @background-color-highlight;
+	}
+
+	.keyword.control {
+		font-style: italic;
 	}
 
 	.linter-highlight {
-		@warning-color: rgb(218, 165, 32);
-		@error-color: rgb(178, 34, 34);
-
 		.region {
 			position: absolute;
 			opacity: 0.50;
@@ -75,6 +90,32 @@ html, body, .workspace {
 			&:after {
 				border-radius: 5px;
 			}
+		}
+	}
+
+	.trailing-whitespace {
+		color: @error-color;
+		font-weight: bold;
+		background: fadeout(@error-color, 75%);
+	}
+
+	.jumpy {
+		.label {
+			box-shadow: 0 0 4px black;
+			padding: 2px;
+			background: fadeout(@input-background-color, 25%);
+			color: white;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			font-size: 14px;
+			line-height: 14px;
+			height: 14px;
+			text-align: center;
+			font-family: "Consolas";
+			font-weight: normal;
+		}
+		.jump {
+			-webkit-animation: jumpy-fadein 0.5s;
 		}
 	}
 }
