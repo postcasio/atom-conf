@@ -11,6 +11,7 @@
 @import 'styles-tree-view';
 @import 'styles-syntax';
 @import 'ui-variables';
+@import 'syntax-variables';
 
 @warning-color: rgb(218, 165, 32);
 @error-color: rgb(178, 34, 34);
@@ -34,12 +35,43 @@ html, body, .workspace {
 
 }
 
-.tab-bar .tab {
-	font-size: 12px;
+.tab-bar {
+	height: 32px;
+	.tab {
+		font-size: 12px;
+		background: darken(@button-background-color, 10%);
+		box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+		&:before, &:after {
+			background: darken(@button-background-color, 10%);
+			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+		}
+		&:after {
+			box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
+		}
+		&.active {
+			background: @syntax-background-color;
+			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+			.title {
+				top: 0;
+			}
+			&:before, &:after {
+
+				background: @syntax-background-color;
+				box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+			}
+			&:after {
+				box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+	&:after {
+		display: none;
+	}
 }
 
 .editor {
 	-webkit-font-smoothing: subpixel-antialiased;
+
 	.gutter {
 		margin-right: 2px;
 
@@ -100,7 +132,7 @@ html, body, .workspace {
 	}
 
 	.jumpy {
-		.label {
+		&.label {
 			box-shadow: 0 0 4px black;
 			padding: 2px;
 			background: fadeout(@input-background-color, 25%);
@@ -114,8 +146,12 @@ html, body, .workspace {
 			font-family: "Consolas";
 			font-weight: normal;
 		}
-		.jump {
+		&.jump {
 			-webkit-animation: jumpy-fadein 0.5s;
 		}
 	}
+
+}
+.minimap {
+	box-shadow: 0 -1px 3px fadeout(black, 50%);
 }

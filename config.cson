@@ -12,6 +12,7 @@
   'tabLength': 4
   'showInvisibles': true
   'lineHeight': 1.4
+  'useHardwareAcceleration': false
 'core':
   'themes': [
     'atom-dark-ui'
@@ -44,11 +45,17 @@
     'language-toml'
     'language-yaml'
     'welcome'
-    'timecop'
     'linter-jscs'
     'atom-color-highlight'
     'language-laravel-blade'
     'minimap-color-highlight'
+    'project-palette-finder'
+    'project-manager'
+    'coffee-refactor'
+    'js-refactor'
+    'refactor'
+    'command-logger'
+    'Tern'
   ]
   'excludeVcsIgnoredPaths': false
 'whitespace':
@@ -58,7 +65,6 @@
 'tree-view': {}
 'scope-inspector':
   'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
-  'showSidebar': false
   'highlightGlobalScope': true
 'linter-php':
   'phpExecutablePath': '/usr/local/bin'
@@ -75,3 +81,7 @@
 'minimap':
   'autoToggle': true
   'minimapScrollIndicator': false
+'linter':
+  'showHightlighting': false
+'jumpy':
+  'useHomingBeaconEffectOnJumps': false
