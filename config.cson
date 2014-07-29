@@ -16,7 +16,7 @@
 'core':
   'themes': [
     'atom-dark-ui'
-    'solarized-dark-custom-syntax'
+    'solarized-dark-syntax'
   ]
   'disabledPackages': [
     'metrics'
@@ -56,6 +56,10 @@
     'refactor'
     'command-logger'
     'Tern'
+    'package-generator'
+    'styleguide'
+    'symbols-view'
+    'timecop'
   ]
   'excludeVcsIgnoredPaths': false
 'whitespace':

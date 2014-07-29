@@ -2,8 +2,73 @@
 	.function.name {
 		font-weight: bold;
 	}
+	.entity .punctuation {
+		color: white;
+	}
+	.character.entity .punctuation {
+		color: darken(@yellow, 10%);
+	}
 
-	.meta.function.prototype .support.constant {
-		color: #839496;
+	.support.class,
+	.source .entity.name.type {
+		color: @red;
+	}
+
+	.source .entity.other.inherited-class {
+		color: darken(@red, 10%);
+	}
+
+	.keyword.control,
+	.storage.modifier {
+		font-style: italic;
+	}
+
+	.keyword.control.elements {
+		font-style: normal;
+	}
+
+	.variable {
+		color: @blue;
+	}
+	.string .punctuation.string {
+		color: @cyan;
+	}
+
+	.source, .text {
+		.punctuation.definition.variable {
+			color: @blue;
+		}
+		.punctuation.definition.array,
+		.brace, .delimiter {
+			color: @base0;
+		}
+		.punctuation.definition.string {
+			color: @cyan;
+		}
+		.punctuation.section.scope {
+			color: @base0;
+		}
+		.storage.type.function,
+		.keyword.other {
+			color: @green;
+		}
+		.comment .keyword.other {
+			color: @base0;
+		}
+		.keyword.operator.class {
+			color: @base0;
+		}
+		.storage.modifier, .storage.type {
+			color: @green;
+		}
+		.entity.name.function {
+			color: @yellow;
+		}
+		.support.function {
+			color: @yellow;
+		}
+		.string .constant.character.escape {
+			color: lighten(@cyan, 50%);
+		}
 	}
 }
