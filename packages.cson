@@ -12,7 +12,6 @@
   'language-apache'
   'language-blade'
   'language-css-plus'
-  'language-javascript-semantic'
   'linter'
   'linter-coffeelint'
   'linter-csslint'
