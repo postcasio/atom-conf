@@ -13,6 +13,8 @@
   'showInvisibles': true
   'lineHeight': 1.4
   'useHardwareAcceleration': false
+  'invisibles':
+    'eol': '¶'
 'core':
   'themes': [
     'atom-dark-ui'
