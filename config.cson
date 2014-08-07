@@ -45,7 +45,6 @@
     'styleguide'
     'symbols-view'
     'timecop'
-    'incompatible-packages'
   ]
   'excludeVcsIgnoredPaths': false
 'whitespace':
