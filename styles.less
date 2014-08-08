@@ -8,7 +8,7 @@
 * http://www.lesscss.org
 */
 
-@import 'styles-tree-view';
+@import 'styles-icons';
 @import 'styles-syntax';
 @import 'ui-variables';
 @import 'syntax-variables';
@@ -36,21 +36,42 @@ html, body, .workspace {
 }
 
 .tab-bar {
-	height: 32px;
+	height: 27px;
+	background: darken(@button-background-color, 15%);
+	z-index: 1;
+	box-shadow: inset 0 -1px 0 #000;
+	padding-left: 0;
 	.tab {
+		margin-top: -5px;
 		font-size: 12px;
 		background: darken(@button-background-color, 10%);
 		box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+		&:first-child {
+			margin-left: 0;
+			padding-left: 10px;
+			width: 160px;
+			margin-left: -1px;
+			&:before {
+				display: none;
+			}
+		}
 		&:before, &:after {
 			background: darken(@button-background-color, 10%);
 			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 0;
 		}
 		&:after {
 			box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
+			-webkit-transform: skewX(-30deg);
+			border-radius: 0;
 		}
 		&.active {
 			background: @syntax-background-color;
 			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+			font-weight: bold;
+			.close-icon {
+				font-weight: normal;
+			}
 			.title {
 				top: 0;
 			}

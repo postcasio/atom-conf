@@ -1,0 +1,79 @@
+@import 'styles-octicons.less';
+
+[data-name]:before {
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+  font-family: 'Octicons Regular';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: @component-line-height;
+  text-align: center;
+  text-decoration: none;
+  font-size: @component-icon-size;
+  width: @component-icon-size;
+  height: @component-icon-size;
+  -webkit-font-smoothing: antialiased;
+  content: @file-text;
+  width: 20px;
+}
+.icon-file-directory[data-name]:before {
+  content: @file-directory;
+}
+[data-name$='.js']:before,
+[data-name$='.html']:before,
+[data-name$='.coffee']:before,
+[data-name$='.php']:before {
+	content: @file-code;
+
+}
+
+[data-name$='.blade.php']:before,
+[data-name$='.chunk.php']:before,
+[data-name$='.include.php']:before,
+[data-name$='.view.php']:before {
+	content: @eye;
+
+}
+
+[data-name$='.sh']:before,
+[data-name='install']:before,
+[data-name='artisan']:before {
+	content: @terminal;
+	margin-left: -1px;
+	margin-right: 6px;
+}
+
+[data-name^='.'],
+.tree-view .status-ignored {
+	color: #555555;
+	font-style: italic;
+}
+
+[data-name='gulpfile.js']:before,
+[data-name='package.json']:before,
+[data-name='composer.json']:before,
+[data-name='deployer.json']:before,
+[data-name='bower.json']:before,
+[data-name='sources.json']:before,
+[data-name='.bowerrc']:before,
+[data-name='Vagrantfile']:before,
+[data-name='.jscsrc']:before {
+	content: @gear;
+	margin-left: -1px;
+	margin-right: 6px;
+}
+
+.tree-view .directory .name[data-name='public']:before,
+.tree-view .directory .name[data-name='public_html']:before {
+	content: @globe;
+	margin-left: -1px;
+	margin-right: 6px;
+}
+.tree-view .directory .name[data-name^='.git']:before {
+	content: @repo;
+}
+.tree-view .directory .name[data-name$='.sql']:before {
+	content: @database;
+}
