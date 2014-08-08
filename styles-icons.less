@@ -77,3 +77,10 @@
 .tree-view .directory .name[data-name$='.sql']:before {
 	content: @database;
 }
+
+[data-name$='.css']:before,
+[data-name$='.less']:before,
+[data-name$='.sass']:before,
+[data-name$='.scss']:before {
+    content: @paintcan;
+}
