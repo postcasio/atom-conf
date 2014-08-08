@@ -46,6 +46,7 @@ html, body, .workspace {
 		font-size: 12px;
 		background: darken(@button-background-color, 10%);
 		box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+
 		&:first-child {
 			margin-left: 0;
 			padding-left: 10px;
@@ -71,7 +72,12 @@ html, body, .workspace {
 			font-weight: bold;
 			.close-icon {
 				font-weight: normal;
+				margin-top: 1px;
 			}
+			&.modified:not(:hover) .close-icon {
+				margin-top: 0;
+			}
+
 			.title {
 				top: 0;
 			}
