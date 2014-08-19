@@ -31,7 +31,86 @@ html, body, .workspace {
 
 .tree-view {
 	font-size: 12px;
+}
 
+.tree-view-breadcrumb {
+	background: fadeout(darken(@button-background-color, 15%), 50%);
+	position: absolute;
+	top: 0;
+	padding: 0 4px;
+	.btn {
+		& + .btn {
+			margin-left: 27px;
+		}
+		cursor: default;
+		background: darken(@syntax-background-color, 2%);
+		border: 0;
+		padding: 0;
+		-webkit-transition: background 0.2s;
+
+		&:before, &:after {
+			content: "";
+			background: darken(@syntax-background-color, 2%);
+			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 0;
+			-webkit-transition: background-color 0.2s;
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			width: 25px;
+			height: 27px;
+			-webkit-transform: skewX(-30deg);
+			left: -14px;
+		}
+		&:after {
+			content: "";
+			box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
+			-webkit-transform: skewX(-30deg);
+			border-radius: 0;
+			top: 0;
+			width: 25px;
+			right: -14px;
+			left: auto;
+		}
+
+		&.btn-primary {
+			background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
+			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+
+			&:before, &:after {
+				background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
+				box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+			}
+			&:after {
+				box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
+			}
+			&:hover {
+				background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
+				box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+				&:before, &:after {
+					background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
+					box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+				}
+				&:after {
+					box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
+				}
+			}
+		}
+		&:hover {
+			background: @syntax-background-color;
+			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
+			&:before, &:after {
+				background: @syntax-background-color;
+			}
+		}
+	}
+	box-shadow: inset 1px 1px 0 #000;
+	z-index: 10;
+}
+
+.with-breadcrumb .tree-view-scroller {
+  -webkit-transform: translate(0,0);
+  height: 100%;
 }
 
 .tab-bar {
@@ -183,6 +262,19 @@ html, body, .workspace {
 		}
 	}
 
+	&.editor-colors.mini {
+		background: darken(@syntax-background-color, 3%);
+		&.is-focused {
+			background: @syntax-background-color;
+		}
+	}
+
+}
+body .settings-view .editor-container .editor.mini {
+	background: darken(@syntax-background-color, 3%);
+	&.is-focused {
+		background: @syntax-background-color;
+	}
 }
 .minimap {
 	box-shadow: 0 -1px 3px fadeout(black, 50%);
