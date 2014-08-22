@@ -1,5 +1,6 @@
 'packages': [
   'color-picker'
+  'custom-title'
   'dash'
   'docblockr'
   'emmet'
@@ -18,6 +19,8 @@
   'linter-php'
   'linter-shellcheck'
   'minimap'
+  'minimap-find-and-replace'
+  'minimap-git-diff'
   'open-recent'
   'package-sync'
   'red-wavy-underline'
@@ -25,6 +28,7 @@
   'slash-closer'
   'themed-settings'
   'toggle-quotes'
+  'tree-view-breadcrumb'
   'white-cursor'
   'zentabs'
 ]
