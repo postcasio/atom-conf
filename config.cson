@@ -27,7 +27,6 @@
     'autoflow'
     'autosave'
     'background-tips'
-    'deprecation-cop'
     'exception-reporting'
     'feedback'
     'language-c'
@@ -70,6 +69,7 @@
 'minimap':
   'autoToggle': true
   'minimapScrollIndicator': false
+  'plugins': {}
 'linter':
   'showHightlighting': false
   'lintOnChangeInterval': 1500
@@ -81,6 +81,6 @@
   'app': '/Applications/iTerm.app'
   'args': ''
 'custom-title':
-  'template': '<%= fileName %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %>'
+  'template': '<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %>'
 'enhanced-package-list':
   'highlightAuthor': 'postcasio'
