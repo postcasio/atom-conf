@@ -187,6 +187,13 @@ html, body, .workspace {
 .editor {
 	-webkit-font-smoothing: subpixel-antialiased;
 
+	.highlights .region {
+		border-radius: 4px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		box-sizing: border-box;
+		background: lighten(@syntax-background-color, 5%);
+	}
+
 	.gutter {
 		margin-right: 2px;
 
@@ -198,23 +205,23 @@ html, body, .workspace {
 		background-color: @background-color-highlight;
 	}
 
-	.linter-highlight {
-		.region {
-			position: absolute;
-			opacity: 0.50;
-			padding: 0 1px;
-			margin-left: -1px;
-			box-sizing: content-box;
+	.highlights {
+		.linter-error {
+			.region {
+				position: absolute;
+				border: 1px solid fadeout(@error-color, 25%);
+				box-shadow: none;
+				background: fadeout(@error-color, 70%);
+			}
 		}
 
-		&.warning .region {
-			background: fadeout(@warning-color, 70%);
-			border: 1px solid @warning-color;
-		}
-
-		&.error .region {
-			background: fadeout(@error-color, 70%);
-			border: 1px solid @error-color;
+		.linter-warning {
+			.region {
+				position: absolute;
+				border: 1px solid fadeout(@warning-color, 25%);
+				box-shadow: none;
+				background: fadeout(@warning-color, 70%);
+			}
 		}
 	}
 
