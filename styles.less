@@ -206,6 +206,17 @@ html, body, .workspace {
 	}
 
 	.highlights {
+		.find-result, .current-result {
+			.region {
+				background: lighten(@syntax-background-color, 10%);
+			}
+		}
+		.current-result {
+			.region {
+				box-shadow: 0 0 10px 4px lighten(@syntax-background-color, 10%);
+				border-color: fadeout(lighten(@syntax-background-color, 90%), 50%);
+			}
+		}
 		.linter-error {
 			.region {
 				position: absolute;
