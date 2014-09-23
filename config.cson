@@ -68,11 +68,16 @@
 'linter-csslint': {}
 'minimap':
   'autoToggle': true
-  'minimapScrollIndicator': false
   'plugins': {}
+  'charHeight': 3
+  'charWidth': 2
+  'lineHeight': 4
+  'minimapScrollIndicator': false
 'linter':
   'showHightlighting': false
   'lintOnChangeInterval': 1500
+  'showErrorInStatusBar': false
+  'showErrorInline': true
 'jumpy':
   'useHomingBeaconEffectOnJumps': false
 'docblockr':
