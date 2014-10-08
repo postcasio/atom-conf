@@ -50,7 +50,6 @@
   'ignoreWhitespaceOnCurrentLine': false
 'zentabs':
   'maximumOpenedTabs': 10
-'tree-view': {}
 'scope-inspector':
   'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
   'highlightGlobalScope': true
@@ -65,27 +64,29 @@
     'text.html.basic'
     'source.css'
   ]
-'linter-csslint': {}
 'minimap':
-  'autoToggle': true
-  'plugins': {}
   'charHeight': 3
   'charWidth': 2
   'lineHeight': 4
+  'plugins':
+    'find-and-replace': true
+    'git-diff': true
   'minimapScrollIndicator': false
 'linter':
-  'showHightlighting': false
   'lintOnChangeInterval': 1500
-  'showErrorInStatusBar': false
   'showErrorInline': true
+  'showErrorInStatusBar': false
 'jumpy':
   'useHomingBeaconEffectOnJumps': false
 'docblockr':
   'extend_double_slash': false
 'show-in-system':
   'app': '/Applications/iTerm.app'
-  'args': ''
 'custom-title':
   'template': '<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %>'
 'enhanced-package-list':
   'highlightAuthor': 'postcasio'
+'find-and-replace':
+  'openProjectFindResultsInRightPane': true
+'git-diff':
+  'showIconsInEditorGutter': true
