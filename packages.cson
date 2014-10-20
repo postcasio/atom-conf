@@ -1,4 +1,6 @@
 'packages': [
+  'ask-stack'
+  'atom-color-highlight'
   'color-picker'
   'custom-title'
   'dash'
@@ -23,9 +25,11 @@
   'minimap-git-diff'
   'open-recent'
   'package-sync'
+  'pdf-view'
   'red-wavy-underline'
   'show-in-system'
   'slash-closer'
+  'task-list'
   'themed-settings'
   'toggle-quotes'
   'tree-view-breadcrumb'

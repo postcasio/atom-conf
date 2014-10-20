@@ -1,92 +1,96 @@
-'exception-reporting':
-  'userId': '2db5bf6e-c14b-a9a9-2b7c-9062cea9f4b0'
-'release-notes':
-  'viewedVersion': '0.95.0'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
-'editor':
-  'fontFamily': 'Consolas'
-  'softTabs': false
-  'tabLength': 4
-  'lineHeight': 1.4
-  'useHardwareAcceleration': false
-  'invisibles':
-    'eol': '¶'
-    'tab': '→'
-  'showInvisibles': true
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'solarized-dark-syntax'
-  ]
-  'disabledPackages': [
-    'metrics'
-    'language-css'
-    'autoflow'
-    'autosave'
-    'background-tips'
-    'exception-reporting'
-    'feedback'
-    'language-c'
-    'language-go'
-    'language-java'
-    'language-objective-c'
-    'language-perl'
-    'language-property-list'
-    'language-ruby-on-rails'
-    'language-sass'
-    'language-toml'
-    'language-yaml'
-    'welcome'
-    'package-generator'
-    'styleguide'
-    'symbols-view'
-    'timecop'
-  ]
-  'excludeVcsIgnoredPaths': false
-'whitespace':
-  'ignoreWhitespaceOnCurrentLine': false
-'zentabs':
-  'maximumOpenedTabs': 10
-'scope-inspector':
-  'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
-  'highlightGlobalScope': true
-'linter-php':
-  'phpExecutablePath': '/usr/local/bin'
-'spell-check':
-  'grammars': [
-    'source.php'
-    'text.git-commit'
-    'text.plain'
-    'text.plain.null-grammar'
-    'text.html.basic'
-    'source.css'
-  ]
-'minimap':
-  'charHeight': 3
-  'charWidth': 2
-  'lineHeight': 4
-  'plugins':
-    'find-and-replace': true
-    'git-diff': true
-  'minimapScrollIndicator': false
-'linter':
-  'lintOnChangeInterval': 1500
-  'showErrorInline': true
-  'showErrorInStatusBar': false
-'jumpy':
-  'useHomingBeaconEffectOnJumps': false
-'docblockr':
-  'extend_double_slash': false
-'show-in-system':
-  'app': '/Applications/iTerm.app'
-'custom-title':
-  'template': '<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %>'
-'enhanced-package-list':
-  'highlightAuthor': 'postcasio'
-'find-and-replace':
-  'openProjectFindResultsInRightPane': true
-'git-diff':
-  'showIconsInEditorGutter': true
+'global':
+  'exception-reporting':
+    'userId': '2db5bf6e-c14b-a9a9-2b7c-9062cea9f4b0'
+  'release-notes':
+    'viewedVersion': '0.95.0'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
+  'editor':
+    'fontFamily': 'Consolas'
+    'softTabs': false
+    'tabLength': 4
+    'lineHeight': 1.4
+    'useHardwareAcceleration': false
+    'invisibles':
+      'eol': '¶'
+      'tab': '→'
+    'showInvisibles': true
+  'core':
+    'themes': [
+      'atom-dark-ui'
+      'solarized-dark-syntax'
+    ]
+    'disabledPackages': [
+      'metrics'
+      'language-css'
+      'autoflow'
+      'autosave'
+      'background-tips'
+      'exception-reporting'
+      'feedback'
+      'language-c'
+      'language-go'
+      'language-java'
+      'language-objective-c'
+      'language-perl'
+      'language-property-list'
+      'language-ruby-on-rails'
+      'language-sass'
+      'language-toml'
+      'language-yaml'
+      'welcome'
+      'package-generator'
+      'styleguide'
+      'symbols-view'
+      'timecop'
+    ]
+  'whitespace':
+    'ignoreWhitespaceOnCurrentLine': false
+  'zentabs':
+    'maximumOpenedTabs': 10
+  'scope-inspector':
+    'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
+    'highlightGlobalScope': true
+  'linter-php':
+    'phpExecutablePath': '/usr/local/bin'
+  'spell-check':
+    'grammars': [
+      'source.php'
+      'text.git-commit'
+      'text.plain'
+      'text.plain.null-grammar'
+      'text.html.basic'
+      'source.css'
+    ]
+  'minimap':
+    'charHeight': 3
+    'charWidth': 2
+    'lineHeight': 4
+    'plugins':
+      'find-and-replace': true
+      'git-diff': true
+    'minimapScrollIndicator': false
+  'linter':
+    'lintOnChangeInterval': 1500
+    'showErrorInline': true
+    'showErrorInStatusBar': false
+  'jumpy':
+    'useHomingBeaconEffectOnJumps': false
+  'docblockr':
+    'extend_double_slash': false
+  'show-in-system':
+    'app': '/Applications/iTerm.app'
+  'custom-title':
+    'template': '<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %>'
+  'enhanced-package-list':
+    'highlightAuthor': 'postcasio'
+  'find-and-replace':
+    'openProjectFindResultsInRightPane': true
+  'git-diff':
+    'showIconsInEditorGutter': true
+  'linter-js-yaml': {}
+  'view-tail-large-files': {}
+  'git-plus': {}
+  'atom-beautify': {}
