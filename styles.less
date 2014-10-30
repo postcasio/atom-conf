@@ -35,8 +35,7 @@ html, body, .workspace {
 
 .tree-view-breadcrumb {
 	background: fadeout(darken(@button-background-color, 15%), 50%);
-	position: absolute;
-	top: 0;
+
 	padding: 0 4px;
 	.btn {
 		& + .btn {
@@ -108,7 +107,7 @@ html, body, .workspace {
 	z-index: 10;
 }
 
-.with-breadcrumb .tree-view-scroller {
+.with-breadcrumb.tree-view-scroller {
   -webkit-transform: translate(0,0);
   height: 100%;
 }
