@@ -90,7 +90,3 @@
     'openProjectFindResultsInRightPane': true
   'git-diff':
     'showIconsInEditorGutter': true
-  'linter-js-yaml': {}
-  'view-tail-large-files': {}
-  'git-plus': {}
-  'atom-beautify': {}
