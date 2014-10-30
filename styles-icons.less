@@ -71,7 +71,8 @@
 	margin-left: -1px;
 	margin-right: 6px;
 }
-.tree-view .directory .name[data-name^='.git']:before {
+.tree-view .directory .name[data-name^='.git']:before,
+.tree-view > .directory .header > .icon-repo.name::before {
 	content: @repo;
 }
 .tree-view .directory .name[data-name$='.sql']:before {
