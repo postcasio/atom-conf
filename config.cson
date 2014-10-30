@@ -90,3 +90,5 @@
     'openProjectFindResultsInRightPane': true
   'git-diff':
     'showIconsInEditorGutter': true
+  'bug-report':
+    'tokenPath': '/Users/dominic/.atom/.bug-report.token'
