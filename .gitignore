@@ -1,0 +1,9 @@
+compile-cache
+storage
+packages
+.*
+.DS_Store
+._*
+atom-shell
+.bug-report.token
+!.gitignore
