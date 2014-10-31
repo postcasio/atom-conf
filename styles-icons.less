@@ -26,7 +26,6 @@
 [data-name$='.coffee']:before,
 [data-name$='.php']:before {
 	content: @file-code;
-
 }
 
 [data-name$='.blade.php']:before,
@@ -34,7 +33,6 @@
 [data-name$='.include.php']:before,
 [data-name$='.view.php']:before {
 	content: @eye;
-
 }
 
 [data-name$='.sh']:before,
@@ -65,8 +63,9 @@
 	margin-right: 6px;
 }
 
-.tree-view .directory .name[data-name='public']:before,
-.tree-view .directory .name[data-name='public_html']:before {
+.name[data-name='public']:before,
+.name[data-name='public_html']:before,
+.name[data-name='www']:before {
 	content: @globe;
 	margin-left: -1px;
 	margin-right: 6px;
@@ -84,4 +83,25 @@
 [data-name$='.sass']:before,
 [data-name$='.scss']:before {
     content: @paintcan;
+}
+
+[data-name$='.jpg']:before,
+[data-name$='.jpeg']:before,
+[data-name$='.gif']:before,
+[data-name$='.png']:before {
+    content: @file-media;
+}
+
+[data-name$='.mp4']:before,
+[data-name$='.avi']:before,
+[data-name$='.flv']:before {
+    content: @device-camera-video;
+}
+
+[data-name$='.pdf']:before {
+    content: @file-pdf;
+}
+
+[data-name].icon-file-symlink-directory:before {
+    content: @file-symlink-directory;
 }
