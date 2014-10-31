@@ -1,6 +1,6 @@
 @import 'styles-octicons.less';
 
-[data-name]:before {
+[data-name]::before {
   margin-right: 5px;
   position: relative;
   top: 1px;
@@ -18,26 +18,26 @@
   content: @file-text;
   width: 20px;
 }
-.icon-file-directory[data-name]:before {
+.icon-file-directory[data-name]::before {
   content: @file-directory;
 }
-[data-name$='.js']:before,
-[data-name$='.html']:before,
-[data-name$='.coffee']:before,
-[data-name$='.php']:before {
+[data-name$='.js']::before,
+[data-name$='.html']::before,
+[data-name$='.coffee']::before,
+[data-name$='.php']::before {
 	content: @file-code;
 }
 
-[data-name$='.blade.php']:before,
-[data-name$='.chunk.php']:before,
-[data-name$='.include.php']:before,
-[data-name$='.view.php']:before {
+[data-name$='.blade.php']::before,
+[data-name$='.chunk.php']::before,
+[data-name$='.include.php']::before,
+[data-name$='.view.php']::before {
 	content: @eye;
 }
 
-[data-name$='.sh']:before,
-[data-name='install']:before,
-[data-name='artisan']:before {
+[data-name$='.sh']::before,
+[data-name='install']::before,
+[data-name='artisan']::before {
 	content: @terminal;
 	margin-left: -1px;
 	margin-right: 6px;
@@ -49,59 +49,59 @@
 	font-style: italic;
 }
 
-[data-name='gulpfile.js']:before,
-[data-name='package.json']:before,
-[data-name='composer.json']:before,
-[data-name='deployer.json']:before,
-[data-name='bower.json']:before,
-[data-name='sources.json']:before,
-[data-name='.bowerrc']:before,
-[data-name='Vagrantfile']:before,
-[data-name='.jscsrc']:before {
+[data-name='gulpfile.js']::before,
+[data-name='package.json']::before,
+[data-name='composer.json']::before,
+[data-name='deployer.json']::before,
+[data-name='bower.json']::before,
+[data-name='sources.json']::before,
+[data-name='.bowerrc']::before,
+[data-name='Vagrantfile']::before,
+[data-name='.jscsrc']::before {
 	content: @gear;
 	margin-left: -1px;
 	margin-right: 6px;
 }
 
-.name[data-name='public']:before,
-.name[data-name='public_html']:before,
-.name[data-name='www']:before {
+.name[data-name='public']::before,
+.name[data-name='public_html']::before,
+.name[data-name='www']::before {
 	content: @globe;
 	margin-left: -1px;
 	margin-right: 6px;
 }
-.tree-view .directory .name[data-name^='.git']:before,
+.tree-view .directory .name[data-name^='.git']::before,
 .tree-view > .directory .header > .icon-repo.name::before {
 	content: @repo;
 }
-.tree-view .directory .name[data-name$='.sql']:before {
+.tree-view .directory .name[data-name$='.sql']::before {
 	content: @database;
 }
 
-[data-name$='.css']:before,
-[data-name$='.less']:before,
-[data-name$='.sass']:before,
-[data-name$='.scss']:before {
+[data-name$='.css']::before,
+[data-name$='.less']::before,
+[data-name$='.sass']::before,
+[data-name$='.scss']::before {
     content: @paintcan;
 }
 
-[data-name$='.jpg']:before,
-[data-name$='.jpeg']:before,
-[data-name$='.gif']:before,
-[data-name$='.png']:before {
+[data-name$='.jpg']::before,
+[data-name$='.jpeg']::before,
+[data-name$='.gif']::before,
+[data-name$='.png']::before {
     content: @file-media;
 }
 
-[data-name$='.mp4']:before,
-[data-name$='.avi']:before,
-[data-name$='.flv']:before {
+[data-name$='.mp4']::before,
+[data-name$='.avi']::before,
+[data-name$='.flv']::before {
     content: @device-camera-video;
 }
 
-[data-name$='.pdf']:before {
+[data-name$='.pdf']::before {
     content: @file-pdf;
 }
 
-[data-name].icon-file-symlink-directory:before {
+[data-name].icon-file-symlink-directory::before {
     content: @file-symlink-directory;
 }

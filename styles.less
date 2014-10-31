@@ -47,7 +47,7 @@ html, body, .workspace {
 		padding: 0;
 		-webkit-transition: background 0.2s;
 
-		&:before, &:after {
+		&::before, &::after {
 			content: "";
 			background: darken(@syntax-background-color, 2%);
 			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
@@ -61,7 +61,7 @@ html, body, .workspace {
 			-webkit-transform: skewX(-30deg);
 			left: -14px;
 		}
-		&:after {
+		&::after {
 			content: "";
 			box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
 			-webkit-transform: skewX(-30deg);
@@ -76,21 +76,21 @@ html, body, .workspace {
 			background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
 			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
 
-			&:before, &:after {
+			&::before, &::after {
 				background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
 				box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
 			}
-			&:after {
+			&::after {
 				box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
 			}
 			&:hover {
 				background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
 				box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
-				&:before, &:after {
+				&::before, &::after {
 					background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
 					box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
 				}
-				&:after {
+				&::after {
 					box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
 				}
 			}
@@ -98,7 +98,7 @@ html, body, .workspace {
 		&:hover {
 			background: @syntax-background-color;
 			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
-			&:before, &:after {
+			&::before, &::after {
 				background: @syntax-background-color;
 			}
 		}
@@ -127,7 +127,7 @@ html, body, .workspace {
 			background: @syntax-background-color;
 			-webkit-transition: background 0.2s;
 
-			&:before, &:after {
+			&::before, &::after {
 				background: @syntax-background-color;
 				-webkit-transition: background 0.2s;
 			}
@@ -138,18 +138,18 @@ html, body, .workspace {
 			padding-left: 10px;
 			width: 160px;
 			margin-left: -1px;
-			&:before {
+			&::before {
 				display: none;
 			}
 		}
-		&:before, &:after {
+		&::before, &::after {
 
 			background: darken(@syntax-background-color, 2%);
 			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
 			border-radius: 0;
 			-webkit-transition: background-color 0.2s;
 		}
-		&:after {
+		&::after {
 			box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
 			-webkit-transform: skewX(-30deg);
 			border-radius: 0;
@@ -169,16 +169,16 @@ html, body, .workspace {
 			.title {
 				top: 0;
 			}
-			&:before, &:after {
+			&::before, &::after {
 				background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
 				box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
 			}
-			&:after {
+			&::after {
 				box-shadow: inset -1px 1px 0 #000, 4px -4px 4px rgba(0, 0, 0, 0.1);
 			}
 		}
 	}
-	&:after {
+	&::after {
 		display: none;
 	}
 }
@@ -243,11 +243,11 @@ html, body, .workspace {
 			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 			border-radius: 5px;
 
-			&:before {
+			&::before {
 				border-radius: 5px;
 				background-image: url(/Users/dominic/.atom/resources/transparent-background.png);
 			}
-			&:after {
+			&::after {
 				border-radius: 5px;
 			}
 		}
