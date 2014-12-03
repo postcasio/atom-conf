@@ -1,6 +1,8 @@
 'packages': [
   'ask-stack'
   'atom-color-highlight'
+  'autocomplete-plus'
+  'autocomplete-snippets'
   'bug-report'
   'color-picker'
   'custom-title'
@@ -34,6 +36,7 @@
   'themed-settings'
   'toggle-quotes'
   'tree-view-breadcrumb'
+  'tree-view-open-files'
   'white-cursor'
   'zentabs'
 ]
