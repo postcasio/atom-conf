@@ -10,13 +10,14 @@
   'editor':
     'fontFamily': 'Consolas'
     'softTabs': false
-    'tabLength': 4
     'lineHeight': 1.4
     'useHardwareAcceleration': false
     'invisibles':
       'eol': '¶'
       'tab': '→'
     'showInvisibles': true
+    'tabLength': 4
+    'useShadowDOM': true
   'core':
     'themes': [
       'atom-dark-ui'
@@ -39,13 +40,16 @@
       'language-ruby-on-rails'
       'language-sass'
       'language-toml'
-      'language-yaml'
       'welcome'
       'package-generator'
       'styleguide'
       'symbols-view'
       'timecop'
+      'minimap-git-diff'
+      'language-yaml'
+      'autocomplete'
     ]
+    'audioBeep': false
   'whitespace':
     'ignoreWhitespaceOnCurrentLine': false
   'zentabs':
@@ -69,13 +73,13 @@
     'charWidth': 2
     'lineHeight': 4
     'plugins':
-      'find-and-replace': true
       'git-diff': true
+      'find-and-replace': true
     'minimapScrollIndicator': false
   'linter':
     'lintOnChangeInterval': 1500
     'showErrorInline': true
-    'showErrorInStatusBar': false
+    'statusBar': 'None'
   'jumpy':
     'useHomingBeaconEffectOnJumps': false
   'docblockr':
@@ -92,3 +96,8 @@
     'showIconsInEditorGutter': true
   'bug-report':
     'tokenPath': '/Users/dominic/.atom/.bug-report.token'
+  'error-status':
+    'useNotifications': true
+  'atom-color-highlight':
+    'hideMarkersInComments': true
+    'hideMarkersInStrings': true
