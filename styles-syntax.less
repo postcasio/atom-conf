@@ -87,4 +87,11 @@ atom-text-editor::shadow {
 			background: rgba(255, 255, 255, 0.1);
 		}
 	}
+
+	.embedded {
+		&.html { -webkit-filter: hue-rotate(90deg); }
+		&.php, &.blade { -webkit-filter: none; }
+		&.js { -webkit-filter: hue-rotate(45deg); }
+		&.coffee { -webkit-filter: hue-rotate(125deg); }
+	}
 }

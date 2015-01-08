@@ -186,13 +186,6 @@ html, body, .workspace {
 atom-text-editor::shadow, .editor {
 	-webkit-font-smoothing: subpixel-antialiased;
 
-	.highlights .region {
-		border-radius: 4px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		box-sizing: border-box;
-		background: lighten(@syntax-background-color, 5%);
-	}
-
 	.gutter {
 		margin-right: 2px;
 
@@ -205,6 +198,13 @@ atom-text-editor::shadow, .editor {
 	}
 
 	.highlights {
+		.region {
+			border-radius: 4px;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			box-sizing: border-box;
+			background: lighten(@syntax-background-color, 5%);
+		}
+
 		.find-result, .current-result {
 			.region {
 				background: lighten(@syntax-background-color, 10%);
@@ -242,22 +242,30 @@ atom-text-editor::shadow, .editor {
 				background: fadeout(white, 75%);
 			}
 		}
-	}
 
-	.atom-color-highlight {
-		.region {
-			margin-left: -2px;
-			-webkit-font-smoothing: subpixel-antialiased;
-			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-			border-radius: 5px;
-
-			&::before {
+		.highlight.atom-color-highlight {
+			.region {
+				margin-left: -2px;
+				-webkit-font-smoothing: subpixel-antialiased;
+				text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+				box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 				border-radius: 5px;
-				background-image: url(atom://assets/transparent-background.png);
+
+				&::before {
+					border-radius: 5px;
+					background-image: url(atom://assets/transparent-background.png);
+				}
+				&::after {
+					border-radius: 5px;
+				}
 			}
-			&::after {
-				border-radius: 5px;
+		}
+
+		.highlight.spell-check-misspelling {
+			.region {
+				background: fadeout(@error-color, 70%);
+				border: 1px dotted fadeout(@error-color, 25%);
+				border-width: 0 0 2px 0;
 			}
 		}
 	}
@@ -295,17 +303,6 @@ atom-text-editor::shadow, .editor {
 		}
 	}
 
-}
-body .settings-view .editor-container .editor.mini {
-	background: darken(@syntax-background-color, 3%);
-	&.is-focused {
-		background: @syntax-background-color;
-	}
-}
-
-.settings-view .config-menu .panels-packages li > a {
-	opacity: 1;
-	transition: none;
 }
 
 .minimap {
