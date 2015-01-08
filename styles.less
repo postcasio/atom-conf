@@ -308,3 +308,18 @@ atom-text-editor::shadow, .editor {
 .minimap {
 	box-shadow: 0 -1px 3px fadeout(black, 50%);
 }
+
+.settings-view {
+	.section-container {
+		max-width: 50%;
+	}
+	.package-container .row {
+		width: 50%;
+		float: left;
+		padding: 0 0 0 (@component-padding / 2);
+		&:nth-child(2n+1) {
+			clear: both;
+			padding: 0 (@component-padding / 2) 0 0;
+		}
+	}
+}
