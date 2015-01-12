@@ -1,4 +1,4 @@
-'global':
+'*':
   'exception-reporting':
     'userId': '2db5bf6e-c14b-a9a9-2b7c-9062cea9f4b0'
   'release-notes':
@@ -9,20 +9,17 @@
     'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
   'editor':
     'fontFamily': 'Consolas'
-    'softTabs': false
     'lineHeight': 1.4
+    'showInvisibles': true
+    'autoIndentOnPaste': false
+    'tabLength': 4
+    'softTabs': false
     'useHardwareAcceleration': false
+    'useShadowDOM': true
     'invisibles':
       'eol': '¶'
       'tab': '→'
-    'showInvisibles': true
-    'tabLength': 4
-    'useShadowDOM': true
   'core':
-    'themes': [
-      'atom-dark-ui'
-      'solarized-dark-syntax'
-    ]
     'disabledPackages': [
       'metrics'
       'language-css'
@@ -31,7 +28,6 @@
       'background-tips'
       'exception-reporting'
       'feedback'
-      'language-c'
       'language-go'
       'language-java'
       'language-objective-c'
@@ -44,10 +40,14 @@
       'package-generator'
       'styleguide'
       'symbols-view'
-      'timecop'
-      'minimap-git-diff'
       'language-yaml'
       'autocomplete'
+      'language-c'
+      'language-clojure'
+    ]
+    'themes': [
+      'atom-dark-ui'
+      'solarized-dark-syntax'
     ]
     'audioBeep': false
   'whitespace':
@@ -69,35 +69,29 @@
       'source.css'
     ]
   'minimap':
-    'charHeight': 3
-    'charWidth': 2
-    'lineHeight': 4
     'plugins':
+      'selection': true
       'git-diff': true
-      'find-and-replace': true
     'minimapScrollIndicator': false
+    'charWidth': 2
+    'charHeight': 3
+    'textOpacity': 0.8
   'linter':
     'lintOnChangeInterval': 1500
     'showErrorInline': true
-    'statusBar': 'None'
   'jumpy':
     'useHomingBeaconEffectOnJumps': false
   'docblockr':
     'extend_double_slash': false
-  'show-in-system':
-    'app': '/Applications/iTerm.app'
   'custom-title':
-    'template': '<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %>'
-  'enhanced-package-list':
-    'highlightAuthor': 'postcasio'
+    'template': '<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %><% if (devMode) { %> [DEV]<% } else if (safeMode) {%> [SAFE]<% } %>'
   'find-and-replace':
     'openProjectFindResultsInRightPane': true
-  'git-diff':
-    'showIconsInEditorGutter': true
   'bug-report':
     'tokenPath': '/Users/dominic/.atom/.bug-report.token'
-  'error-status':
-    'useNotifications': true
   'atom-color-highlight':
     'hideMarkersInComments': true
     'hideMarkersInStrings': true
+  'grammar-token-limit':
+    'maxTokensPerLine': 250
+  'tree-view': {}
