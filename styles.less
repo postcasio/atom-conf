@@ -303,6 +303,23 @@ atom-text-editor::shadow, .editor {
 		}
 	}
 
+	.indent-guide-improved {
+		display: none !important;
+		+ .indent-guide-improved {
+			display: block !important;
+			background: fadeout(#839496, 90%);
+
+			&.indent-guide-stack {
+				background: fadeout(#839496, 60%);
+			}
+
+			&.indent-guide-active {
+				background: fadeout(#839496, 40%);
+				width: 2px;
+			}
+		}
+	}
+
 }
 
 .minimap {
