@@ -18,7 +18,6 @@
     'useShadowDOM': true
     'invisibles':
       'eol': '¶'
-      'tab': '→'
   'core':
     'disabledPackages': [
       'metrics'
