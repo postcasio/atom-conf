@@ -202,7 +202,7 @@ atom-text-editor::shadow, .editor {
 			border-radius: 4px;
 			border: 1px solid rgba(255, 255, 255, 0.2);
 			box-sizing: border-box;
-			background: lighten(@syntax-background-color, 5%);
+			background: fadeout(white, 90%);
 		}
 
 		.find-result, .current-result {
@@ -321,19 +321,4 @@ atom-text-editor::shadow, .editor {
 
 .minimap {
 	box-shadow: 0 -1px 3px fadeout(black, 50%);
-}
-
-.settings-view {
-	.section-container {
-		max-width: 75%;
-	}
-	.package-container .row {
-		width: 50%;
-		float: left;
-		padding: 0 0 0 (@component-padding / 2);
-		&:nth-child(2n+1) {
-			clear: both;
-			padding: 0 (@component-padding / 2) 0 0;
-		}
-	}
 }
