@@ -46,7 +46,7 @@
     ]
     'themes': [
       'atom-dark-ui'
-      'solarized-dark-syntax'
+      'one-dark-syntax'
     ]
     'audioBeep': false
   'whitespace':

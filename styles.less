@@ -9,7 +9,6 @@
 */
 
 @import 'styles-icons';
-@import 'styles-syntax';
 @import 'ui-variables';
 @import 'syntax-variables';
 
@@ -155,7 +154,7 @@ html, body, .workspace {
 			border-radius: 0;
 		}
 		&.active {
-			background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
+			background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 30%), @syntax-background-color);
 			box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
 			font-weight: bold;
 			.close-icon {
@@ -170,7 +169,7 @@ html, body, .workspace {
 				top: 0;
 			}
 			&::before, &::after {
-				background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 10%), @syntax-background-color);
+				background: -webkit-linear-gradient(top, lighten(@syntax-background-color, 30%), @syntax-background-color);
 				box-shadow: inset 1px 1px 0 #000, -4px -4px 4px rgba(0, 0, 0, 0.1);
 			}
 			&::after {
