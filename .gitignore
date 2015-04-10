@@ -6,4 +6,5 @@ packages
 ._*
 atom-shell
 .bug-report.token
+node_modules
 !.gitignore
