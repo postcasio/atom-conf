@@ -1,96 +1,87 @@
-'*':
-  'exception-reporting':
-    'userId': '2db5bf6e-c14b-a9a9-2b7c-9062cea9f4b0'
-  'release-notes':
-    'viewedVersion': '0.95.0'
-  'welcome':
-    'showOnStartup': false
-  'metrics':
-    'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
-  'editor':
-    'fontFamily': 'Consolas'
-    'lineHeight': 1.4
-    'showInvisibles': true
-    'autoIndentOnPaste': false
-    'tabLength': 4
-    'softTabs': false
-    'useHardwareAcceleration': false
-    'useShadowDOM': true
-    'invisibles':
-      'eol': '¶'
-  'core':
-    'disabledPackages': [
-      'metrics'
-      'language-css'
-      'autoflow'
-      'autosave'
-      'background-tips'
-      'exception-reporting'
-      'feedback'
-      'language-go'
-      'language-java'
-      'language-objective-c'
-      'language-perl'
-      'language-property-list'
-      'language-ruby-on-rails'
-      'language-sass'
-      'language-toml'
-      'welcome'
-      'package-generator'
-      'styleguide'
-      'symbols-view'
-      'language-yaml'
-      'autocomplete'
-      'language-c'
-      'language-clojure'
+"*":
+  welcome:
+    showOnStartup: false
+  editor:
+    lineHeight: 1.4
+    showInvisibles: true
+    autoIndentOnPaste: false
+    tabLength: 4
+    softTabs: false
+    useHardwareAcceleration: false
+    useShadowDOM: true
+    invisibles:
+      eol: "¶"
+    fontFamily: "Consolas"
+  core:
+    disabledPackages: [
+      "metrics"
+      "autoflow"
+      "autosave"
+      "background-tips"
+      "exception-reporting"
+      "feedback"
+      "language-go"
+      "language-objective-c"
+      "language-perl"
+      "language-property-list"
+      "language-ruby-on-rails"
+      "language-sass"
+      "language-toml"
+      "package-generator"
+      "styleguide"
+      "language-yaml"
+      "autocomplete"
+      "language-c"
+      "language-clojure"
+      "welcome"
     ]
-    'themes': [
-      'atom-dark-ui'
-      'one-dark-syntax'
+    audioBeep: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+    ensureSingleTrailingNewline: true
+  zentabs:
+    maximumOpenedTabs: 10
+  "linter-php":
+    phpExecutablePath: "/usr/local/bin"
+  "spell-check":
+    grammars: [
+      "source.php"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "text.html.basic"
+      "source.css"
     ]
-    'audioBeep': false
-  'whitespace':
-    'ignoreWhitespaceOnCurrentLine': false
-  'zentabs':
-    'maximumOpenedTabs': 10
-  'scope-inspector':
-    'userId': '049e863cf6c5134adc4f358017eccc61854a9e5e'
-    'highlightGlobalScope': true
-  'linter-php':
-    'phpExecutablePath': '/usr/local/bin'
-  'spell-check':
-    'grammars': [
-      'source.php'
-      'text.git-commit'
-      'text.plain'
-      'text.plain.null-grammar'
-      'text.html.basic'
-      'source.css'
-    ]
-  'minimap':
-    'plugins':
-      'selection': true
-      'git-diff': true
-    'minimapScrollIndicator': false
-    'charWidth': 2
-    'charHeight': 3
-    'textOpacity': 0.8
-  'linter':
-    'lintOnChangeInterval': 1500
-    'showErrorInline': true
-  'jumpy':
-    'useHomingBeaconEffectOnJumps': false
-  'docblockr':
-    'extend_double_slash': false
-  'custom-title':
-    'template': '<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %><% if (devMode) { %> [DEV]<% } else if (safeMode) {%> [SAFE]<% } %>'
-  'find-and-replace':
-    'openProjectFindResultsInRightPane': true
-  'bug-report':
-    'tokenPath': '/Users/dominic/.atom/.bug-report.token'
-  'atom-color-highlight':
-    'hideMarkersInComments': true
-    'hideMarkersInStrings': true
-  'grammar-token-limit':
-    'maxTokensPerLine': 250
-  'tree-view': {}
+  minimap:
+    plugins:
+      selection: true
+      "git-diff": true
+      "find-and-replace": true
+    minimapScrollIndicator: false
+    charWidth: 2
+    charHeight: 3
+    textOpacity: 0.8
+  linter:
+    lintOnChangeInterval: 1500
+    showErrorInline: true
+  jumpy:
+    useHomingBeaconEffectOnJumps: false
+  docblockr:
+    extend_double_slash: false
+  "custom-title":
+    template: "<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %><% if (devMode) { %> [DEV]<% } else if (safeMode) {%> [SAFE]<% } %>"
+  "find-and-replace":
+    openProjectFindResultsInRightPane: true
+  "bug-report":
+    tokenPath: "/Users/dominic/.atom/.bug-report.token"
+  "atom-color-highlight":
+    hideMarkersInComments: true
+    hideMarkersInStrings: true
+  "grammar-token-limit":
+    maxTokensPerLine: 250
+".litcoffee.source":
+  editor:
+    tabLength: 2
+".coffee.source":
+  editor:
+    tabLength: 2
