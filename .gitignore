@@ -7,4 +7,6 @@ packages
 atom-shell
 .bug-report.token
 node_modules
+blob-store
+
 !.gitignore
