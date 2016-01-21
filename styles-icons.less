@@ -104,6 +104,10 @@
     content: @file-pdf;
 }
 
+[data-name$='.ipa']::before {
+    content: @device-mobile;
+}
+
 [data-name].icon-file-symlink-directory::before {
     content: @file-symlink-directory;
 }
