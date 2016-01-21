@@ -90,13 +90,15 @@
 [data-name$='.jpg']::before,
 [data-name$='.jpeg']::before,
 [data-name$='.gif']::before,
-[data-name$='.png']::before {
+[data-name$='.png']::before,
+[data-name$='.ico']::before {
     content: @file-media;
 }
 
 [data-name$='.mp4']::before,
 [data-name$='.avi']::before,
-[data-name$='.flv']::before {
+[data-name$='.flv']::before,
+[data-name$='.swf']::before {
     content: @device-camera-video;
 }
 
@@ -110,4 +112,13 @@
 
 [data-name].icon-file-symlink-directory::before {
     content: @file-symlink-directory;
+}
+
+.tree-view .directory .name[data-name='node_modules']::before,
+.tree-view .directory .name[data-name='bower_components']::before {
+    content: @package;
+}
+
+.tree-view .directory .name[data-name='application']::before {
+    content: @browser;
 }
