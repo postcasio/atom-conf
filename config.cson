@@ -1,18 +1,12 @@
 "*":
-  welcome:
-    showOnStartup: false
-  editor:
-    lineHeight: 1.4
-    showInvisibles: true
-    autoIndentOnPaste: false
-    tabLength: 4
-    softTabs: false
-    useHardwareAcceleration: false
-    useShadowDOM: true
-    invisibles:
-      eol: "¶"
-    fontFamily: "Consolas"
+  "atom-autocomplete-php": {}
+  "atom-color-highlight":
+    hideMarkersInComments: true
+    hideMarkersInStrings: true
+  "bug-report":
+    tokenPath: "/Users/dominic/.atom/.bug-report.token"
   core:
+    audioBeep: false
     disabledPackages: [
       "metrics"
       "autoflow"
@@ -25,7 +19,6 @@
       "language-perl"
       "language-property-list"
       "language-ruby-on-rails"
-      "language-sass"
       "language-toml"
       "package-generator"
       "styleguide"
@@ -34,15 +27,44 @@
       "language-c"
       "language-clojure"
       "welcome"
+      "tree-view-breadcrumb"
     ]
-    audioBeep: false
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
-    ensureSingleTrailingNewline: true
-  zentabs:
-    maximumOpenedTabs: 10
+  "custom-title":
+    template: "<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %><% if (devMode) { %> [DEV]<% } else if (safeMode) {%> [SAFE]<% } %>"
+  docblockr:
+    extend_double_slash: false
+  editor:
+    fontFamily: "Consolas"
+    fontSize: 15
+    invisibles:
+      eol: "¶"
+    lineHeight: 1.4
+    showInvisibles: true
+    softTabs: false
+    tabLength: 4
+    useShadowDOM: true
+  "find-and-replace":
+    openProjectFindResultsInRightPane: true
+  "grammar-token-limit":
+    maxTokensPerLine: 250
+  jumpy:
+    useHomingBeaconEffectOnJumps: false
+  linter:
+    lintOnChangeInterval: 1500
+    showErrorInline: true
+  "linter-jshint": {}
   "linter-php":
     phpExecutablePath: "/usr/local/bin"
+  minimap:
+    charHeight: 3
+    charWidth: 2
+    minimapScrollIndicator: false
+    plugins:
+      "find-and-replace": true
+      "git-diff": true
+      selection: true
+    textOpacity: 0.8
+  "pdf-view": {}
   "spell-check":
     grammars: [
       "source.php"
@@ -52,36 +74,16 @@
       "text.html.basic"
       "source.css"
     ]
-  minimap:
-    plugins:
-      selection: true
-      "git-diff": true
-      "find-and-replace": true
-    minimapScrollIndicator: false
-    charWidth: 2
-    charHeight: 3
-    textOpacity: 0.8
-  linter:
-    lintOnChangeInterval: 1500
-    showErrorInline: true
-  jumpy:
-    useHomingBeaconEffectOnJumps: false
-  docblockr:
-    extend_double_slash: false
-  "custom-title":
-    template: "<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %><% if (devMode) { %> [DEV]<% } else if (safeMode) {%> [SAFE]<% } %>"
-  "find-and-replace":
-    openProjectFindResultsInRightPane: true
-  "bug-report":
-    tokenPath: "/Users/dominic/.atom/.bug-report.token"
-  "atom-color-highlight":
-    hideMarkersInComments: true
-    hideMarkersInStrings: true
-  "grammar-token-limit":
-    maxTokensPerLine: 250
-".litcoffee.source":
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: true
+    ignoreWhitespaceOnCurrentLine: false
+  zentabs:
+    maximumOpenedTabs: 10
+".coffee.source":
   editor:
     tabLength: 2
-".coffee.source":
+".litcoffee.source":
   editor:
     tabLength: 2

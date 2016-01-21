@@ -45,14 +45,13 @@ body.platform-win32, .platform-win32 .workspace {
 
 
 atom-text-editor::shadow {
-	-webkit-font-smoothing: subpixel-antialiased;
-
 	.gutter {
-		margin-right: 2px;
-
 		.foldable .icon-right {
 			visibility: visible;
 		}
+	}
+	.gutter-container {
+		margin-right: 2px;
 	}
 	.cursor-line {
 		background-color: fadeout(lighten(@background-color-highlight, 10%), 50%);
@@ -61,14 +60,13 @@ atom-text-editor::shadow {
 	.highlights {
 		.region {
 			border-radius: 4px;
-			border: 1px solid rgba(255, 255, 255, 0.2);
 			box-sizing: border-box;
 			background: fadeout(white, 90%);
 		}
 
 		.find-result, .current-result {
 			.region {
-				background: lighten(@syntax-background-color, 10%);
+				background: fadeout(lighten(@syntax-background-color, 10%), 50%);
 			}
 		}
 		.current-result {
