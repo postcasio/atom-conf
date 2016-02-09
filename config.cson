@@ -27,7 +27,6 @@
       "language-c"
       "language-clojure"
       "welcome"
-      "tree-view-breadcrumb"
     ]
   "custom-title":
     template: "<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %><% if (devMode) { %> [DEV]<% } else if (safeMode) {%> [SAFE]<% } %>"
@@ -55,6 +54,7 @@
   "linter-jshint": {}
   "linter-php":
     phpExecutablePath: "/usr/local/bin"
+  "linter-sass-lint": {}
   minimap:
     charHeight: 3
     charWidth: 2
@@ -62,6 +62,7 @@
     plugins:
       "find-and-replace": true
       "git-diff": true
+      pigments: true
       selection: true
     textOpacity: 0.8
   "pdf-view": {}
@@ -74,6 +75,7 @@
       "text.html.basic"
       "source.css"
     ]
+  tabs: {}
   welcome:
     showOnStartup: false
   whitespace:
