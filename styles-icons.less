@@ -1,26 +1,33 @@
 @import 'styles-octicons.less';
 
-[data-name]::before {
-  margin-right: 5px;
-  position: relative;
-  top: 1px;
-  font-family: 'Octicons Regular';
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  line-height: @component-line-height;
-  text-align: center;
-  text-decoration: none;
-  font-size: @component-icon-size;
-  width: @component-icon-size;
-  height: @component-icon-size;
-  -webkit-font-smoothing: antialiased;
-  content: @file-text;
-  width: 20px;
+.xx-icon {
+    margin-right: 5px;
+    position: relative;
+    top: 1px;
+    font-family: 'Octicons Regular';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: @component-line-height;
+    text-align: center;
+    text-decoration: none;
+    font-size: @component-icon-size;
+    width: @component-icon-size;
+    height: @component-icon-size;
+    -webkit-font-smoothing: antialiased;
+    content: @file-text;
+    width: 20px;
 }
-.icon-file-directory[data-name]::before {
-  content: @file-directory;
+
+.tab[data-type=TreeView] .title::before {
+    .xx-icon();
+    content: @package;
 }
+
+.tab-bar [data-name]::before {
+    .xx-icon();
+}
+
 [data-name$='.js']::before,
 [data-name$='.html']::before,
 [data-name$='.coffee']::before,
@@ -113,6 +120,7 @@
 [data-name].icon-file-symlink-directory::before {
     content: @file-symlink-directory;
 }
+
 
 .tree-view .directory .name[data-name='node_modules']::before,
 .tree-view .directory .name[data-name='bower_components']::before {

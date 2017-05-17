@@ -36,15 +36,13 @@ body.platform-win32, .platform-win32 .workspace {
 }
 
 .tab-bar {
-	font-size: 12px;
-
 	.tab .title {
 		text-align: left;
 	}
 }
 
 
-atom-text-editor::shadow {
+atom-text-editor.editor {
 	.gutter {
 		.foldable .icon-right {
 			visibility: visible;
@@ -182,4 +180,24 @@ atom-text-editor::shadow {
 
 .minimap {
 	box-shadow: 0 -1px 3px fadeout(black, 50%);
+}
+
+.theme-one-dark-ui {
+	.tab-bar {
+		height: 3em;
+		.tab {
+			line-height: 3em;
+			padding-left: 5px;
+			.close-icon {
+				top: 0.75em;
+			}
+			&.modified:not(:hover) .close-icon::before {
+				top: 0.2em;
+			}
+		}
+	}
+}
+
+.tab[data-type=TreeView] {
+	border-bottom: 1px solid #181a1f;
 }
