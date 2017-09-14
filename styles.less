@@ -43,6 +43,10 @@ body.platform-win32, .platform-win32 .workspace {
 
 
 atom-text-editor.editor {
+	.syntax--php.syntax--class.syntax--punctuation {
+		color: @syntax-text-color;
+	}
+
 	.gutter {
 		.foldable .icon-right {
 			visibility: visible;
@@ -198,10 +202,10 @@ atom-text-editor.editor {
 	}
 }
 
-.tab[data-type=TreeView] {
-	border-bottom: 1px solid #181a1f;
-}
-
 .status-bar .linter-status-count > a {
 	margin-right: 6px;
+}
+
+atom-text-editor .comment-clickable .region {
+	display: none;
 }

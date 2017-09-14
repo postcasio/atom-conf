@@ -1,8 +1,14 @@
 "*":
-  "atom-autocomplete-php": {}
+  "atom-autocomplete-php":
+    binComposer: "C:\\Program Files\\PHP\\5.6.30\\composer.phar"
+    binPhp: "C:\\Program Files\\PHP\\5.6.30\\php"
+    insertNewlinesForUseStatements: true
   "atom-color-highlight":
     hideMarkersInComments: true
     hideMarkersInStrings: true
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnType: false
   "bug-report":
     tokenPath: "/Users/dominic/.atom/.bug-report.token"
   core:
@@ -22,12 +28,23 @@
       "language-toml"
       "package-generator"
       "styleguide"
-      "language-yaml"
       "autocomplete"
       "language-c"
       "language-clojure"
       "welcome"
+      "custom-title"
+      "pigments"
+      "linter-php"
+      "linter"
+      "linter-ui-default"
+      "linter-shellcheck"
+      "linter-sass-lint"
+      "linter-less"
+      "linter-jshint"
+      "linter-csslint"
+      "linter-coffeelint"
     ]
+    excludeVcsIgnoredPaths: false
   "custom-title":
     template: "<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (gitAdded || gitDeleted) { %> [<% if (gitAdded) { %>+<%= gitAdded %><% } %><% if (gitAdded && gitDeleted) { %>/<% } %><% if (gitDeleted) { %>-<%= gitDeleted %><% } %>] <% } %><% if (projectName) { %> - <%= projectName %><% if (gitHead) { %>/<%= gitHead %><% } %><% } %> - Atom <%= atom.getVersion() %><% if (devMode) { %> [DEV]<% } else if (safeMode) {%> [SAFE]<% } %>"
   docblockr:
@@ -43,29 +60,51 @@
     tabLength: 4
     useShadowDOM: true
   "find-and-replace":
-    openProjectFindResultsInRightPane: true
+    projectSearchResultsPaneSplitDirection: "right"
   "grammar-token-limit":
     maxTokensPerLine: 250
+  "ide-php":
+    phpPath: "C:\\Program Files\\PHP\\7.1.6"
   jumpy:
     useHomingBeaconEffectOnJumps: false
+  "line-ending-selector":
+    defaultLineEnding: "LF"
   linter:
     lintOnChangeInterval: 1500
-    showErrorInline: true
   "linter-jshint": {}
   "linter-php":
-    phpExecutablePath: "/usr/local/bin"
+    executablePath: "C:\\Program Files\\PHP\\7.1.6\\php"
+    phpExecutablePath: "C:\\Program Files\\PHP\\7.1.6\\php"
   "linter-sass-lint": {}
+  "linter-ui-default":
+    panelHeight: 196
   minimap:
     charHeight: 3
     charWidth: 2
     minimapScrollIndicator: false
     plugins:
       "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
-      pigments: true
+      "git-diffDecorationsZIndex": 0
+      pigments: false
+      pigmentsDecorationsZIndex: 0
       selection: true
+      selectionDecorationsZIndex: 0
     textOpacity: 0.8
   "pdf-view": {}
+  "php-cs-fixer":
+    executablePath: "C:\\Users\\10-5\\AppData\\Roaming\\Composer\\vendor\\friendsofphp\\php-cs-fixer\\php-cs-fixer"
+    executeOnSave: true
+    fixerArguments: [
+      "--using-cache=no"
+      "--no-interaction"
+      "--allow-risky=yes"
+    ]
+    phpExecutablePath: "C:\\Program Files\\PHP\\5.6.30\\php"
+  "remote-atom":
+    keep_alive: true
+    launch_at_startup: true
   "spell-check":
     grammars: [
       "source.php"
@@ -76,6 +115,11 @@
       "source.css"
     ]
   tabs: {}
+  tester:
+    testStateStyle: "Icon"
+  "tester-phpunit":
+    phpBinaryPath: "C:\\Program Files\\PHP\\5.6.30\\php"
+    phpunitBinaryPath: "C:\\Program Files\\PHP\\5.6.30\\phpunit.phar"
   welcome:
     showOnStartup: false
   whitespace:
@@ -83,9 +127,16 @@
     ignoreWhitespaceOnCurrentLine: false
   zentabs:
     maximumOpenedTabs: 10
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
 ".coffee.source":
   editor:
     tabLength: 2
 ".litcoffee.source":
+  editor:
+    tabLength: 2
+".source.yaml":
   editor:
     tabLength: 2
